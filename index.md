@@ -1,6 +1,6 @@
 # Personalized Recipe Recommender
 
-![Personalized Recipe Recommender/Adobe Firefly](https://github.com/amamgee/DES222ProcessJournal/blob/main/images/Firefly%20Personalized%20Recipe%20Recommender%2C%20more%20variety%20of%20vegetables%2067202.jpg)
+![Personalized Recipe Recommender/Adobe Firefly](https://i.postimg.cc/t4tqVjvk/Firefly-Personalized-Recipe-Recommender-more-variety-of-vegetables-67202.jpg)
 
 ## Introduction
 
