@@ -108,8 +108,6 @@ window.addEventListener('deviceorientation', function(event) {
 - The code snippets and technical challenges are clearly documented.
 - References are linked for easy access to documentation.
 
-This format will help keep your process journal structured and easy to follow!
-
 
 
 
