@@ -6,72 +6,65 @@
 This project is a mobile web application that utilizes mobile device sensors (geolocation and device orientation) to create a responsive, context-aware user experience. The app changes its interface and functionality based on the user's location and the orientation of their mobile device.
 
 ## Table of Contents
-1. [Week 1: Project Concept & Research](#week-1-project-concept--research)
-2. [Week 2: Geolocation Integration](#week-2-geolocation-integration)
-3. [Week 3: Orientation Integration](#week-3-orientation-integration)
-4. [Week 4: Combining Location and Orientation](#week-4-combining-location-and-orientation)
-5. [Week 5: Refinement](#week-5-refinement)
+1. [Project Concept & Research](#project-concept--research)
+2. [Geolocation Integration](#geolocation-integration)
+3. [Orientation Integration](#orientation-integration)
+4. [Combining Location and Orientation](#combining-location-and-orientation)
+5. [Refinement](#refinement)
 6. [References](#references)
 
 ---
 
-## Week 1: Project Concept & Research
-- **Goal**: The primary goal this week was to establish a clear concept for a context-aware mobile web app and explore existing technologies and applications that use mobile device sensors. The focus was on leveraging geolocation and orientation sensors to provide a personalized and dynamic user experience that adapts to the user's physical environment.
-- **Concept**: The app I intend to develop will respond to the user's physical environment by tapping into the following device sensors:
+## Project Concept & Research
 
-Geolocation (GPS) – to track the user’s position and adapt the app's content based on their location.
-Device Orientation (Gyroscope/Accelerometer) – to track how the user is holding and moving their device, altering the app’s behavior accordingly.
+- **Goal**: 
+  The primary goal this week was to establish a clear concept for a context-aware mobile web app and explore existing technologies that utilize mobile device sensors. The focus was on leveraging geolocation and orientation sensors to provide a personalized, dynamic user experience that adapts to the user's physical environment.
 
-Example Use Cases:
-Location-based interaction: The app could display relevant points of interest (e.g., nearby landmarks, cafes, or events) based on the user’s GPS coordinates.
-Orientation-based interaction: Depending on the direction the user faces, the app could change the UI or provide context-relevant data, such as showing information about landmarks in the user’s field of view.
+- **Concept**: 
+  The app will respond to the user's physical environment by tapping into two key device sensors:
+  - **Geolocation (GPS)**: Tracks the user’s position and adapts the app's content based on their location.
+  - **Device Orientation (Gyroscope/Accelerometer)**: Tracks how the user is holding or moving their device, altering the app’s behavior accordingly.
 
-Visual Conceptualization:
-I created a simple visual representation of the app's key components, illustrating how it might work based on sensor input. Below is a conceptual diagram outlining how the geolocation and orientation sensors feed into the app’s interface:
+### Example Use Cases:
+- **Location-based interaction**: The app could display relevant points of interest (e.g., nearby landmarks, cafes, or events) based on the user’s GPS coordinates.
+- **Orientation-based interaction**: Depending on the direction the user faces, the app could change the UI or provide context-relevant data, such as showing information about landmarks in the user’s field of view.
 
-<img src="https://i.postimg.cc/Fz8DQGyT/Geolocation.jpg" alt="Geolocation/Canva">
+### Visual Conceptualization:
+A simple visual representation of the app's key components was created to illustrate how it might work based on sensor input. Below is a conceptual diagram outlining how the geolocation and orientation sensors feed into the app’s interface:
 
+![Conceptual Diagram](https://i.postimg.cc/Fz8DQGyT/Geolocation.jpg)
 
-- **Inspiration**: Research and Inspiration
-Research Goal:
-Before beginning development, I researched existing apps and projects that effectively use geolocation and device orientation sensors. These applications helped inform the technical feasibility and design decisions for my app.
+- **Inspiration**: 
+  - **Research Goal**: Before starting development, I researched existing apps that effectively use geolocation and device orientation sensors. This research helped inform the technical feasibility and design decisions for the app.
 
-Key Inspirations:
-Google Maps: A prime example of geolocation integration. The app continuously updates the user’s position, offering location-based services like navigation, traffic updates, and nearby places of interest.
+  ### Key Inspirations:
+  - **Google Maps**: A prime example of geolocation integration. Google Maps continuously updates the user’s position, offering location-based services like navigation, traffic updates, and nearby places of interest.  
+    - **Relevance**: Inspired real-time location-based updates in my app.
 
-Google Maps providing real-time location data.
+  - **AR Navigation**: Apps like Google ARCore and Pokémon Go use the phone’s camera and orientation sensors to overlay digital content onto the real world, reacting to how the device is tilted or moved.  
+    - **Relevance**: Showcased how orientation-based interactions can enrich the user experience by dynamically adapting the app interface.
 
-Relevance: The way Google Maps integrates geolocation inspired me to focus on real-time location-based updates in my own app.
+  - **Star Walk 2**: This app uses both geolocation and orientation to map out stars based on the user's location and the direction they're pointing their device.  
+    - **Relevance**: A strong example of seamlessly integrating geolocation and orientation, providing a model for sensor fusion in my app.
 
-AR Navigation: Augmented reality (AR) apps, like Google ARCore or Pokemon Go, use the phone’s camera and orientation sensors to overlay digital content onto the real world. These apps offer immersive experiences by reacting to how the device is tilted or moved.
+- **Reflection**: 
+  Location and orientation sensors offer a simple yet powerful way to create a dynamic, real-world-responsive user experience. However, combining both inputs meaningfully and intuitively presents challenges, such as:
+  - Smooth transitions between different interface modes based on location.
+  - Responsive, non-intrusive orientation-based actions that feel natural to the user.
 
-Augmented reality apps showcasing the power of orientation tracking.
+### Initial Thoughts:
+- **Opportunities**: By merging geolocation and orientation, the app can become a powerful tool for contextual interactions, with potential applications in tourism, education, or navigation.
+- **Challenges**: Balancing data from both sensors to provide a fluid experience, handling sensor accuracy, and managing user permissions will be crucial.
 
-Relevance: Orientation-based interactions in AR apps demonstrate how a device’s movement can enrich user experiences by dynamically adapting the app interface.
+### Next Steps:
+- Begin prototyping the geolocation feature, focusing on retrieving the user’s position in real time.
+- Research sensor fusion techniques to combine orientation and location data for complex interactions.
+- Create mockups to visualize how the interface changes with different sensor inputs.
 
-Star Walk 2: This app uses both geolocation and device orientation to map out the stars based on the user’s location and the direction they are pointing their device.
-
-Star Walk 2 showing constellations in the sky based on the user's position and orientation.
-
-Relevance: Star Walk 2 combines geolocation and orientation seamlessly, serving as a strong model for integrating both types of sensors in my app.
-
-
-- **Reflection**: Combining Geolocation & Orientation:
-Location and orientation sensors provide a simple yet powerful way to create a dynamic user experience that responds to the real world. However, the challenge lies in combining both inputs in a way that is intuitive and user-friendly. For example:
-
-Smooth transitions between different interface modes based on location changes.
-Responsive and non-intrusive orientation-based actions that feel natural to the user.
-Initial Thoughts:
-Opportunities: By merging geolocation and orientation, the app can become a powerful tool for contextual interactions, potentially useful in fields like tourism, education, or navigation.
-Challenges: The technical challenge will be balancing both sensors' data to provide a fluid experience. Sensor accuracy and permission handling will also be critical.
-Next Steps:
-Begin prototyping the geolocation feature, focusing on retrieving the user’s position in real-time.
-Research more in-depth on sensor fusion techniques that can effectively combine orientation and location data for more complex interactions.
-Create mockups to visualize how the interface changes with the different sensor inputs.
 
 ---
 
-## Week 2: Geolocation Integration
+## Geolocation Integration
 - **Goal**: Implement geolocation to track the user’s location and provide real-time information.
 - **Progress**: 
   - Used the browser's built-in `navigator.geolocation` API to fetch latitude and longitude.
@@ -89,7 +82,7 @@ navigator.geolocation.getCurrentPosition(function(position) {
 
 ---
 
-## Week 3: Orientation Integration
+## Orientation Integration
 - **Goal**: Implement device orientation tracking using the gyroscope and accelerometer.
 - **Progress**: 
   - Integrated the DeviceOrientation API to detect changes in device rotation.
@@ -106,7 +99,7 @@ window.addEventListener('deviceorientation', function(event) {
 
 ---
 
-## Week 4: Combining Location and Orientation
+## Combining Location and Orientation
 - **Goal**: Merge geolocation and orientation functionality to create a seamless user experience.
 - **Progress**: 
   - Successfully combined location and orientation tracking.
@@ -117,7 +110,7 @@ window.addEventListener('deviceorientation', function(event) {
 
 ---
 
-## Week 5: Refinement
+## Refinement
 - **Goal**: Improve UI/UX and handle edge cases.
 - **Progress**: 
   - Refined the app’s design to ensure smooth transitions between different contexts (location changes and orientation shifts).
