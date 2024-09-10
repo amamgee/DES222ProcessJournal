@@ -6,8 +6,8 @@
 This project is a mobile web application that utilizes mobile device sensors (geolocation and device orientation) to create a responsive, context-aware user experience. The app changes its interface and functionality based on the user's location and the orientation of their mobile device.
 
 ## Table of Contents
-1. [Project Concept & Research](#project-concept--research)
-2. [Geolocation Integration](#geolocation-integration)
+1. [Project Concept & Research](#project-concept-research)
+2. [Geolocation Integration with Recipe API](#Geolocation-Integration-with-Recipe-API)
 3. [Orientation Integration](#orientation-integration)
 4. [Combining Location and Orientation](#combining-location-and-orientation)
 5. [Refinement](#refinement)
@@ -64,21 +64,55 @@ A simple visual representation of the app's key components was created to illust
 
 ---
 
-## Geolocation Integration
-- **Goal**: Implement geolocation to track the user’s location and provide real-time information.
+## Geolocation Integration with Recipe API
+
+- **Goal**: This week’s goal was to implement geolocation tracking using the `navigator.geolocation` API and integrate it with a Recipe API (e.g., Spoonacular) to suggest context-aware recipes based on the user's location and time of day.
+
 - **Progress**: 
-  - Used the browser's built-in `navigator.geolocation` API to fetch latitude and longitude.
-  - Integrated **Google Maps API** to display the user’s current location on a map.
-- **Challenges**: Handling cases where users deny location access and testing accuracy in different environments.
-- **Code Snippet**:
-```javascript
-navigator.geolocation.getCurrentPosition(function(position) {
-    let latitude = position.coords.latitude;
-    let longitude = position.coords.longitude;
-    console.log("Latitude: " + latitude + ", Longitude: " + longitude);
-    // Display location on map
-});
-- **Reflection**: The geolocation feature was successfully implemented. Next, I plan to link this location data to real-time contextual information, such as nearby points of interest.
+  - **Geolocation Tracking**: Implemented the browser’s `navigator.geolocation` API to fetch the user’s latitude and longitude.
+  - **Recipe API Integration**: Integrated the Spoonacular API to fetch recipes based on location, and added a feature to provide meal suggestions depending on the time of day (breakfast, lunch, or dinner).
+  - **UI**: The app displays the user’s location and provides recipe suggestions based on local cuisine or regional preferences.
+  
+  - **Code Snippet**:
+    ```javascript
+    const apiKey = 'YOUR_API_KEY'; // Your Recipe API Key
+
+    // Get user's current location
+    navigator.geolocation.getCurrentPosition(function(position) {
+        let latitude = position.coords.latitude;
+        let longitude = position.coords.longitude;
+        console.log(`Latitude: ${latitude}, Longitude: ${longitude}`);
+
+        // Fetch recipe suggestions based on location and time of day
+        const hours = new Date().getHours();
+        let mealType = 'dinner'; // Default to dinner
+        if (hours < 12) mealType = 'breakfast';
+        else if (hours >= 12 && hours < 17) mealType = 'lunch';
+
+        fetch(`https://api.spoonacular.com/recipes/complexSearch?type=${mealType}&apiKey=${apiKey}`)
+            .then(response => response.json())
+            .then(data => {
+                console.log(`${mealType} recipes:`, data);
+                // Display recipe results on your web page
+            })
+            .catch(error => console.error('Error fetching recipes:', error));
+    });
+    ```
+
+- **Challenges**: 
+  - Handling user permission for accessing geolocation data.
+  - Testing the accuracy and consistency of location-based recipe suggestions across different devices and regions.
+  - Managing API rate limits (due to the free API tier).
+
+- **Reflection**: 
+  The integration of geolocation and a recipe API was successfully implemented. By combining the user's real-time location with recipe suggestions, the app enhances the user's experience by providing locally relevant meal ideas. Additionally, incorporating time of day to suggest breakfast, lunch, or dinner was a useful contextual addition. 
+
+  Next steps involve refining the UI and optimizing the performance of API requests. Linking the user’s location more closely with region-specific recipes will further improve the app’s utility.
+
+- **Next Steps**: 
+  - Improve error handling for cases where geolocation access is denied.
+  - Enhance the recipe display by adding images, ingredient lists, and links to detailed instructions.
+  - Explore adding more filters, such as dietary preferences or ingredients-based searches.
 
 ---
 
