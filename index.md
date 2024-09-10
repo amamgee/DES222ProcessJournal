@@ -6,8 +6,8 @@
 This project is a mobile web application that utilizes mobile device sensors (geolocation and device orientation) to create a responsive, context-aware user experience. The app changes its interface and functionality based on the user's location and the orientation of their mobile device.
 
 ## Table of Contents
-1. [Project Concept & Research](#project-concept-research)
-2. [Geolocation Integration with Recipe API](#Geolocation-Integration-with-Recipe-API)
+1. [Project Concept & Research](#project-concept-&-research)
+2. [Geolocation Integration with Recipe API](#geolocation-integration-with-recipe-api)
 3. [Orientation Integration](#orientation-integration)
 4. [Combining Location and Orientation](#combining-location-and-orientation)
 5. [Refinement](#refinement)
