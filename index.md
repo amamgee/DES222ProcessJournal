@@ -29,10 +29,10 @@ This project is a mobile web application that utilizes mobile device sensors (ge
 - **Location-based interaction**: The app could display relevant points of interest (e.g., nearby landmarks, cafes, or events) based on the user’s GPS coordinates.
 - **Orientation-based interaction**: Depending on the direction the user faces, the app could change the UI or provide context-relevant data, such as showing information about landmarks in the user’s field of view.
 
-### Visual Conceptualization:
+### Visual Conceptualisation:
 A simple visual representation of the app's key components was created to illustrate how it might work based on sensor input. Below is a conceptual diagram outlining how the geolocation and orientation sensors feed into the app’s interface:
 
-[Geolocation.png](https://www.imghippo.com/i/OgKYK1725979563.png)
+<img src="https://imgur.com/a/9vxda3k" alt="Geolocation">
 
 - **Inspiration**: 
   - **Research Goal**: Before starting development, I researched existing apps that effectively use geolocation and device orientation sensors. This research helped inform the technical feasibility and design decisions for the app.
@@ -59,7 +59,7 @@ A simple visual representation of the app's key components was created to illust
 ### Next Steps:
 - Begin prototyping the geolocation feature, focusing on retrieving the user’s position in real time.
 - Research sensor fusion techniques to combine orientation and location data for complex interactions.
-- Create mockups to visualize how the interface changes with different sensor inputs.
+- Create mockups to visualise how the interface changes with different sensor inputs.
 
 
 ---
