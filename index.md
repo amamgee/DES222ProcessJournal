@@ -32,7 +32,7 @@ This project is a mobile web application that utilizes mobile device sensors (ge
 ### Visual Conceptualization:
 A simple visual representation of the app's key components was created to illustrate how it might work based on sensor input. Below is a conceptual diagram outlining how the geolocation and orientation sensors feed into the app’s interface:
 
-[Geolocation.png](https://postimg.cc/w1qSsFbh)
+[Geolocation.png](https://www.imghippo.com/i/OgKYK1725979563.png)
 
 - **Inspiration**: 
   - **Research Goal**: Before starting development, I researched existing apps that effectively use geolocation and device orientation sensors. This research helped inform the technical feasibility and design decisions for the app.
