@@ -64,8 +64,6 @@ A simple visual representation of the app's key components was created to illust
 
 ---
 
-<img src="https://i.imgur.com/DmGOVLI.jpeg" alt="Recipe APP">
-
 ## Geolocation Integration with Recipe API
 
 - **Goal**: This week’s goal was to implement geolocation tracking using the `navigator.geolocation` API and integrate it with a Recipe API (e.g., Spoonacular) to suggest context-aware recipes based on the user's location and time of day.
@@ -110,6 +108,10 @@ A simple visual representation of the app's key components was created to illust
   The integration of geolocation and a recipe API was successfully implemented. By combining the user's real-time location with recipe suggestions, the app enhances the user's experience by providing locally relevant meal ideas. Additionally, incorporating time of day to suggest breakfast, lunch, or dinner was a useful contextual addition. 
 
   Next steps involve refining the UI and optimizing the performance of API requests. Linking the user’s location more closely with region-specific recipes will further improve the app’s utility.
+
+- **Visual Conceptualisation:**:
+I've created a visual representation for Geolocation and Recipe API integration which illustrates how the app might look with geolocation on the top half and recipe suggestions on the bottom half, based on the user's location and time of day:
+<img src="https://files.oaiusercontent.com/file-LTeOERNzFqcwB2uTeO16Ngxq?se=2024-09-10T15%3A11%3A42Z&sp=r&sv=2024-08-04&sr=b&rscc=max-age%3D604800%2C%20immutable%2C%20private&rscd=attachment%3B%20filename%3Dc7df0e31-c8dc-423e-bbd4-58af3ee7e498.webp&sig=Ta6djJclIgAjClVyUiVmuJbbLHJ8hxz6aHnEtNRhCiU%3D" alt="Recipe APP">
 
 - **Next Steps**: 
   - Improve error handling for cases where geolocation access is denied.
