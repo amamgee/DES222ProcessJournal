@@ -30,13 +30,13 @@ This project is a mobile web application that utilizes mobile device sensors (ge
   - Integrated **Google Maps API** to display the user’s current location on a map.
 - **Challenges**: Handling cases where users deny location access and testing accuracy in different environments.
 - **Code Snippet**:
-  ```javascript
-  navigator.geolocation.getCurrentPosition(function(position) {
-      let latitude = position.coords.latitude;
-      let longitude = position.coords.longitude;
-      console.log("Latitude: " + latitude + ", Longitude: " + longitude);
-      // Display location on map
-  });
+```javascript
+navigator.geolocation.getCurrentPosition(function(position) {
+    let latitude = position.coords.latitude;
+    let longitude = position.coords.longitude;
+    console.log("Latitude: " + latitude + ", Longitude: " + longitude);
+    // Display location on map
+});
 - **Reflection**: The geolocation feature was successfully implemented. Next, I plan to link this location data to real-time contextual information, such as nearby points of interest.
 
 ## Week 3: Orientation Integration
@@ -71,11 +71,26 @@ window.addEventListener('deviceorientation', function(event) {
   - Conducted user testing to gather feedback.
 - **Next Steps**: Prepare for the final project presentation, refine edge cases, and ensure cross-browser compatibility.
 
-### References:
-Geolocation API Documentation
-DeviceOrientation API Documentation
-Google Maps API Documentation
-[Similar Projects and Inspiration](links to relevant project research)
+## References:
+
+## Geolocation API Documentation
+- **Description**: Provides real-time location information, including latitude, longitude, altitude, and accuracy, from the user's device.
+- **Use Case**: Used to fetch the user's current geographic position in the web app.
+- **Link**: [Geolocation API Documentation](https://developer.mozilla.org/en-US/docs/Web/API/Geolocation_API)
+
+## DeviceOrientation API Documentation
+- **Description**: Allows access to the orientation of the user's device (alpha, beta, gamma values) relative to the Earth’s frame of reference.
+- **Use Case**: Implemented to detect and react to changes in the device's rotation in the web app.
+- **Link**: [DeviceOrientation API Documentation](https://developer.mozilla.org/en-US/docs/Web/API/DeviceOrientationEvent)
+
+## Google Maps API Documentation
+- **Description**: Provides a map interface and related services, such as displaying maps, routes, and points of interest.
+- **Use Case**: Integrated to display the user's real-time location and provide contextual map data based on geolocation.
+- **Link**: [Google Maps API Documentation](https://developers.google.com/maps/documentation)
+
+## Similar Projects and Inspiration
+- **Description**: Research and inspiration from existing projects and tools that leverage geolocation, orientation sensors, and context-aware web apps.
+- **Link**: [Similar Projects and Inspiration](#) (Add your relevant links here)
 
 ### Highlights:
 - The document is formatted clearly with proper headings for each section.
