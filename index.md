@@ -73,22 +73,22 @@ window.addEventListener('deviceorientation', function(event) {
 
 ## References:
 
-## Geolocation API Documentation
+### Geolocation API Documentation
 - **Description**: Provides real-time location information, including latitude, longitude, altitude, and accuracy, from the user's device.
 - **Use Case**: Used to fetch the user's current geographic position in the web app.
 - **Link**: [Geolocation API Documentation](https://developer.mozilla.org/en-US/docs/Web/API/Geolocation_API)
 
-## DeviceOrientation API Documentation
+### DeviceOrientation API Documentation
 - **Description**: Allows access to the orientation of the user's device (alpha, beta, gamma values) relative to the Earth’s frame of reference.
 - **Use Case**: Implemented to detect and react to changes in the device's rotation in the web app.
 - **Link**: [DeviceOrientation API Documentation](https://developer.mozilla.org/en-US/docs/Web/API/DeviceOrientationEvent)
 
-## Google Maps API Documentation
+### Google Maps API Documentation
 - **Description**: Provides a map interface and related services, such as displaying maps, routes, and points of interest.
 - **Use Case**: Integrated to display the user's real-time location and provide contextual map data based on geolocation.
 - **Link**: [Google Maps API Documentation](https://developers.google.com/maps/documentation)
 
-## Similar Projects and Inspiration
+### Similar Projects and Inspiration
 - **Description**: Research and inspiration from existing projects and tools that leverage geolocation, orientation sensors, and context-aware web apps.
 - **Link**: [Similar Projects and Inspiration](#) (Add your relevant links here)
 
