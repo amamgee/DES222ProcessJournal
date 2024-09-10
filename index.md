@@ -1,5 +1,7 @@
 # Context-Aware Web Application: Process Journal
 
+<img src="https://topdevs.org//storage/pictures/0e/b5/0eb534c148ba1f84fdbb4ee629b90d57e2b603e89dd5e5403b8f0a45cf5cf624.5ff30c64.146ab620.jpeg" alt="Geolocation/Adobe Firefly">
+
 ## Project Overview
 This project is a mobile web application that utilizes mobile device sensors (geolocation and device orientation) to create a responsive, context-aware user experience. The app changes its interface and functionality based on the user's location and the orientation of their mobile device.
 
@@ -35,54 +37,53 @@ This project is a mobile web application that utilizes mobile device sensors (ge
       console.log("Latitude: " + latitude + ", Longitude: " + longitude);
       // Display location on map
   });
-Reflection: The geolocation feature was successfully implemented. Next, I plan to link this location data to real-time contextual information, such as nearby points of interest.
+- **Reflection**: The geolocation feature was successfully implemented. Next, I plan to link this location data to real-time contextual information, such as nearby points of interest.
 
-Week 3: Orientation Integration
-Goal: Implement device orientation tracking using the gyroscope and accelerometer.
-Progress:
-Integrated the DeviceOrientation API to detect changes in device rotation.
-Tested UI reactions to different device orientations.
-Challenges: Interpreting orientation data meaningfully (alpha, beta, gamma values) and providing a smooth user experience.
-Code Snippet:
-javascript
-Copy code
+## Week 3: Orientation Integration
+- **Goal**: Implement device orientation tracking using the gyroscope and accelerometer.
+- **Progress**: 
+  - Integrated the DeviceOrientation API to detect changes in device rotation.
+  - Tested UI reactions to different device orientations.
+- **Challenges**: Interpreting orientation data meaningfully (alpha, beta, gamma values) and providing a smooth user experience.
+- **Code Snippet**:
 window.addEventListener('deviceorientation', function(event) {
     let alpha = event.alpha;
     let beta = event.beta;
     let gamma = event.gamma;
     console.log(`Alpha: ${alpha}, Beta: ${beta}, Gamma: ${gamma}`);
 });
-Reflection: This feature can create a fun and interactive experience, such as changing information displayed based on which direction the user is facing.
-Week 4: Combining Location and Orientation
-Goal: Merge geolocation and orientation functionality to create a seamless user experience.
-Progress:
-Successfully combined location and orientation tracking.
-Developed a feature where the app provides different information based on the user's location and device tilt.
-Example: The app now shows nearby landmarks based on location and adjusts UI content based on the phone’s direction.
-Challenges: Ensuring that changes in orientation feel intuitive and not overwhelming, while handling location updates efficiently.
-Reflection: Combining these two sensors results in a richer, more immersive experience. Testing in different environments will be crucial for optimization.
-Week 5: Refinement
-Goal: Improve UI/UX and handle edge cases.
-Progress:
-Refined the app’s design to ensure a smooth transition between different contexts (location changes and orientation shifts).
-Implemented error handling for cases where users deny sensor permissions or move to areas with poor GPS signal.
-Conducted user testing to gather feedback.
-Next Steps: Prepare for the final project presentation, refine edge cases, and ensure cross-browser compatibility.
-References
+- **Reflection**: This feature can create a fun and interactive experience, such as changing the information displayed based on the direction the user is facing.
+
+## Week 4: Combining Location and Orientation
+- **Goal**: Merge geolocation and orientation functionality to create a seamless user experience.
+- **Progress**: 
+  - Successfully combined location and orientation tracking.
+  - Developed a feature where the app provides different information based on the user's location and device tilt.
+  - Example: The app now shows nearby landmarks based on location and adjusts UI content based on the phone’s direction.
+- **Challenges**: Ensuring that changes in orientation feel intuitive and not overwhelming, while handling location updates efficiently.
+- **Reflection**: Combining these two sensors results in a richer, more immersive experience. Testing in different environments will be crucial for optimization.
+
+## Week 5: Refinement
+- **Goal**: Improve UI/UX and handle edge cases.
+- **Progress**: 
+  - Refined the app’s design to ensure smooth transitions between different contexts (location changes and orientation shifts).
+  - Implemented error handling for cases where users deny sensor permissions or move to areas with poor GPS signal.
+  - Conducted user testing to gather feedback.
+- **Next Steps**: Prepare for the final project presentation, refine edge cases, and ensure cross-browser compatibility.
+
+### References:
 Geolocation API Documentation
 DeviceOrientation API Documentation
 Google Maps API Documentation
 [Similar Projects and Inspiration](links to relevant project research)
-vbnet
-Copy code
 
-### Key Points in the Markdown:
-- **Week-by-week structure** that documents both the technical and conceptual aspects of your development.
-- **Code snippets** to show your progress on integrating geolocation and orientation.
-- **Reflection sections** to discuss your insights and challenges, helping you track how your understanding evolves.
+### Highlights:
+- The document is formatted clearly with proper headings for each section.
+- Includes a reflection for each week, outlining the insights gained.
+- The code snippets and technical challenges are clearly documented.
+- References are linked for easy access to documentation.
 
-Let me know if you’d like further customization or any additions!
-
+This format will help keep your process journal structured and easy to follow!
 
 
 
