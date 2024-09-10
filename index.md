@@ -39,6 +39,8 @@ navigator.geolocation.getCurrentPosition(function(position) {
 });
 - **Reflection**: The geolocation feature was successfully implemented. Next, I plan to link this location data to real-time contextual information, such as nearby points of interest.
 
+---
+
 ## Week 3: Orientation Integration
 - **Goal**: Implement device orientation tracking using the gyroscope and accelerometer.
 - **Progress**: 
@@ -54,6 +56,8 @@ window.addEventListener('deviceorientation', function(event) {
 });
 - **Reflection**: This feature can create a fun and interactive experience, such as changing the information displayed based on the direction the user is facing.
 
+---
+
 ## Week 4: Combining Location and Orientation
 - **Goal**: Merge geolocation and orientation functionality to create a seamless user experience.
 - **Progress**: 
@@ -63,6 +67,8 @@ window.addEventListener('deviceorientation', function(event) {
 - **Challenges**: Ensuring that changes in orientation feel intuitive and not overwhelming, while handling location updates efficiently.
 - **Reflection**: Combining these two sensors results in a richer, more immersive experience. Testing in different environments will be crucial for optimization.
 
+---
+
 ## Week 5: Refinement
 - **Goal**: Improve UI/UX and handle edge cases.
 - **Progress**: 
@@ -70,6 +76,8 @@ window.addEventListener('deviceorientation', function(event) {
   - Implemented error handling for cases where users deny sensor permissions or move to areas with poor GPS signal.
   - Conducted user testing to gather feedback.
 - **Next Steps**: Prepare for the final project presentation, refine edge cases, and ensure cross-browser compatibility.
+
+---
 
 ## References:
 
@@ -91,6 +99,8 @@ window.addEventListener('deviceorientation', function(event) {
 ### Similar Projects and Inspiration
 - **Description**: Research and inspiration from existing projects and tools that leverage geolocation, orientation sensors, and context-aware web apps.
 - **Link**: [Similar Projects and Inspiration](#) (Add your relevant links here)
+
+---
 
 ### Highlights:
 - The document is formatted clearly with proper headings for each section.
