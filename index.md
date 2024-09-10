@@ -64,6 +64,8 @@ A simple visual representation of the app's key components was created to illust
 
 ---
 
+<img src="https://i.imgur.com/DmGOVLI.jpeg" alt="Recipe APP">
+
 ## Geolocation Integration with Recipe API
 
 - **Goal**: This week’s goal was to implement geolocation tracking using the `navigator.geolocation` API and integrate it with a Recipe API (e.g., Spoonacular) to suggest context-aware recipes based on the user's location and time of day.
