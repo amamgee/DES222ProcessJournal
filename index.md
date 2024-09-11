@@ -3,7 +3,7 @@
 <img src="https://topdevs.org//storage/pictures/0e/b5/0eb534c148ba1f84fdbb4ee629b90d57e2b603e89dd5e5403b8f0a45cf5cf624.5ff30c64.146ab620.jpeg" alt="Geolocation/Top Devs">
 
 ## Project Overview
-This project is a mobile web application that utilizes mobile device sensors (geolocation and device orientation) to create a responsive, context-aware user experience. The app changes its interface and functionality based on the user's location and the orientation of their mobile device.
+This project is a mobile web application that utilises mobile device sensors (geolocation and device orientation) to create a responsive, context-aware user experience. The app changes its interface and functionality based on the user's location and the orientation of their mobile device.
 
 ## Table of Contents
 1. [Project Concept & Research](#project-concept-&-research)
@@ -18,7 +18,7 @@ This project is a mobile web application that utilizes mobile device sensors (ge
 ## Project Concept & Research
 
 - **Goal**: 
-  The primary goal this week was to establish a clear concept for a context-aware mobile web app and explore existing technologies that utilize mobile device sensors. The focus was on leveraging geolocation and orientation sensors to provide a personalized, dynamic user experience that adapts to the user's physical environment.
+  The primary goal for this was to establish a clear concept for a context-aware mobile web app and explore existing technologies that utilise mobile device sensors (this could be a web interface, viewable on mobile device). The focus was on leveraging geolocation and orientation sensors to provide a personalised, dynamic user experience that adapts to the user's physical environment.
 
 - **Concept**: 
   The app will respond to the user's physical environment by tapping into two key device sensors:
@@ -104,7 +104,7 @@ A simple visual representation of the app's key components was created to illust
   - Testing the accuracy and consistency of location-based recipe suggestions across different devices and regions.
   - Managing API rate limits (due to the free API tier).
 
-### Reflection: 
+- **Reflection**: 
   The integration of geolocation and a recipe API was successfully implemented. By combining the user's real-time location with recipe suggestions, the app enhances the user's experience by providing locally relevant meal ideas. Additionally, incorporating time of day to suggest breakfast, lunch, or dinner was a useful contextual addition. 
 
   Next steps involve refining the UI and optimizing the performance of API requests. Linking the user’s location more closely with region-specific recipes will further improve the app’s utility.
