@@ -104,16 +104,16 @@ A simple visual representation of the app's key components was created to illust
   - Testing the accuracy and consistency of location-based recipe suggestions across different devices and regions.
   - Managing API rate limits (due to the free API tier).
 
-- **Reflection**: 
+### Reflection: 
   The integration of geolocation and a recipe API was successfully implemented. By combining the user's real-time location with recipe suggestions, the app enhances the user's experience by providing locally relevant meal ideas. Additionally, incorporating time of day to suggest breakfast, lunch, or dinner was a useful contextual addition. 
 
   Next steps involve refining the UI and optimizing the performance of API requests. Linking the user’s location more closely with region-specific recipes will further improve the app’s utility.
 
-- **Visual Conceptualisation:**
+### Visual Conceptualisation:
 I've created a visual representation for Geolocation and Recipe API integration which illustrates how the app might look with geolocation on the top half and recipe suggestions on the bottom half, based on the user's location and time of day:
 <img src="https://i.imgur.com/WsNfpoO.jpeg" alt="Recipe APP">
 
-- **Next Steps**: 
+### Next Steps: 
   - Improve error handling for cases where geolocation access is denied.
   - Enhance the recipe display by adding images, ingredient lists, and links to detailed instructions.
   - Explore adding more filters, such as dietary preferences or ingredients-based searches.
