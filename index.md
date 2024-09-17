@@ -121,19 +121,41 @@ I've created a visual representation for Geolocation and Recipe API integration 
 ---
 
 ## Orientation Integration
-- **Goal**: Implement device orientation tracking using the gyroscope and accelerometer.
+- **Goal**: This week’s objective was to implement device orientation tracking using the gyroscope and accelerometer. I also began exploring ways to combine the orientation data with the geolocation feature introduced earlier. A key application I envisioned is to use these inputs for a kitchen-focused context-aware recipe app, which tailors content based on both the user’s location and orientation within their space.
 - **Progress**: 
-  - Integrated the DeviceOrientation API to detect changes in device rotation.
-  - Tested UI reactions to different device orientations.
-- **Challenges**: Interpreting orientation data meaningfully (alpha, beta, gamma values) and providing a smooth user experience.
+  - **DeviceOrientation API Integration**: I integrated the DeviceOrientation API to detect changes in the device's rotation (alpha, beta, gamma values), which represent the phone’s orientation in 3D space.
+  - **Recipe API Integration**: Using a Recipe API, I plan to dynamically suggest recipes based on the user’s orientation and time of day. For instance, the phone’s orientation could change what is displayed, such as switching between breakfast, lunch, or dinner suggestions when the device is tilted.
+  - **UI**: The interface responds to these orientation changes, potentially offering interactive experiences where the user might point their phone in different directions to reveal various recipe ideas.
+- **Challenges**:
+- Interpreting orientation data meaningfully and linking it to the user experience was complex. Making sure the content displayed when the user tilts their device feels intuitive, and ensuring that the orientation readings remain accurate without causing confusion.
+- Another challenge was ensuring smooth transitions between geolocation data (e.g., location-based recipe suggestions) and orientation-based UI changes..
 - **Code Snippet**:
 window.addEventListener('deviceorientation', function(event) {
-    let alpha = event.alpha;
-    let beta = event.beta;
-    let gamma = event.gamma;
+    let alpha = event.alpha; // Rotation around z-axis
+    let beta = event.beta;   // Rotation around x-axis
+    let gamma = event.gamma; // Rotation around y-axis
     console.log(`Alpha: ${alpha}, Beta: ${beta}, Gamma: ${gamma}`);
+    
+    // Use orientation to change recipe suggestions
+    if (beta > 45) {
+        showDinnerRecipes(); // Tilted forward, show dinner options
+    } else if (beta < -45) {
+        showBreakfastRecipes(); // Tilted backward, show breakfast options
+    } else {
+        showLunchRecipes(); // Neutral, show lunch options
+    }
 });
-- **Reflection**: This feature can create a fun and interactive experience, such as changing the information displayed based on the direction the user is facing.
+- **Reflection**: 
+  The orientation integration adds an exciting layer of interactivity. I see great potential in combining geolocation with orientation, particularly for an app that adapts to user behaviors like moving around the kitchen, pointing their phone towards different areas, and receiving recipe suggestions accordingly. A key challenge moving forward will be to ensure that orientation-based transitions feel smooth and purposeful without overwhelming the user with too many sudden UI changes.
+
+### Visual Conceptualisation:
+I created a simple diagram to show how the app uses both geolocation and device orientation to tailor recipe suggestions for users in a kitchen environment.
+<img src="https://i.imgur.com/TfQdArb.jpeg" alt="Recipe APP">
+
+### Next Steps: 
+- Continue refining how geolocation and orientation inputs work together to create a seamless and intuitive user experience.
+- Experiment with more practical use cases in the kitchen context. For instance, tying the Recipe API to seasonal ingredients or nearby grocery store locations based on the user's current geolocation.
+- Explore further customization for recipe suggestions by linking orientation with the time of day, weather, and user preferences.
 
 ---
 
