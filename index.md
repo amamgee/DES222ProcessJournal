@@ -111,7 +111,7 @@ A simple visual representation of the app's key components was created to illust
 
 ### Visual Conceptualisation:
 I've created a visual representation for Geolocation and Recipe API integration which illustrates how the app might look with geolocation on the top half and recipe suggestions on the bottom half, based on the user's location and time of day:
-<img src="https://i.imgur.com/TfQdArb.jpeg" alt="Recipe APP">
+<img src="https://i.imgur.com/oINXUHo.jpeg" alt="Recipe APP">
 
 ### Next Steps: 
   - Improve error handling for cases where geolocation access is denied.
@@ -127,9 +127,10 @@ I've created a visual representation for Geolocation and Recipe API integration 
   - **Recipe API Integration**: Using a Recipe API, I plan to dynamically suggest recipes based on the user’s orientation and time of day. For instance, the phone’s orientation could change what is displayed, such as switching between breakfast, lunch, or dinner suggestions when the device is tilted.
   - **UI**: The interface responds to these orientation changes, potentially offering interactive experiences where the user might point their phone in different directions to reveal various recipe ideas.
 - **Challenges**:
-- Interpreting orientation data meaningfully and linking it to the user experience was complex. Making sure the content displayed when the user tilts their device feels intuitive, and ensuring that the orientation readings remain accurate without causing confusion.
-- Another challenge was ensuring smooth transitions between geolocation data (e.g., location-based recipe suggestions) and orientation-based UI changes..
+   - Interpreting orientation data meaningfully and linking it to the user experience was complex. Making sure the content displayed when the user tilts their device feels intuitive, and ensuring that the orientation readings remain accurate without causing confusion.
+   - Another challenge was ensuring smooth transitions between geolocation data (e.g., location-based recipe suggestions) and orientation-based UI changes..
 - **Code Snippet**:
+```javascript
 window.addEventListener('deviceorientation', function(event) {
     let alpha = event.alpha; // Rotation around z-axis
     let beta = event.beta;   // Rotation around x-axis
@@ -145,6 +146,7 @@ window.addEventListener('deviceorientation', function(event) {
         showLunchRecipes(); // Neutral, show lunch options
     }
 });
+ ```
 - **Reflection**: 
   The orientation integration adds an exciting layer of interactivity. I see great potential in combining geolocation with orientation, particularly for an app that adapts to user behaviors like moving around the kitchen, pointing their phone towards different areas, and receiving recipe suggestions accordingly. A key challenge moving forward will be to ensure that orientation-based transitions feel smooth and purposeful without overwhelming the user with too many sudden UI changes.
 
