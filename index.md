@@ -73,8 +73,8 @@ A simple visual representation of the app's key components was created to illust
   - **Recipe API Integration**: Integrated the Spoonacular API to fetch recipes based on location, and added a feature to provide meal suggestions depending on the time of day (breakfast, lunch, or dinner).
   - **UI**: The app displays the user’s location and provides recipe suggestions based on local cuisine or regional preferences.
   
-  - **Code Snippet**:
-    ```javascript
+- **Code Snippet**:
+```javascript
     const apiKey = 'YOUR_API_KEY'; // Your Recipe API Key
 
     // Get user's current location
@@ -97,7 +97,7 @@ A simple visual representation of the app's key components was created to illust
             })
             .catch(error => console.error('Error fetching recipes:', error));
     });
-    ```
+```
 
 - **Challenges**: 
   - Handling user permission for accessing geolocation data.
@@ -152,7 +152,7 @@ window.addEventListener('deviceorientation', function(event) {
 
 ### Visual Conceptualisation:
 I created a simple diagram to show how the app uses both geolocation and device orientation to tailor recipe suggestions for users in a kitchen environment.
-<img src="https://i.imgur.com/TfQdArb.jpeg" alt="Recipe APP">
+<img src="https://i.imgur.com/ffUzjgr.jpeg" alt="Recipe APP">
 
 ### Next Steps: 
 - Continue refining how geolocation and orientation inputs work together to create a seamless and intuitive user experience.
