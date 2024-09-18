@@ -172,6 +172,7 @@ I created a simple diagram to show how the app uses both geolocation and device 
 - **Challenges**:
  - Balancing sensor data input: Combining geolocation and orientation data posed challenges in ensuring smooth transitions between modes. The system needed to be responsive but not too sensitive to minor movements.
  - Managing sensor accuracy: Ensuring the device orientation feature worked correctly in different environments (e.g., bright sunlight, cloudy areas) was tricky, especially as certain sensors perform differently in certain situations.
+ 
 - **Code Snippet**:
 ```javascript
 // Geolocation
@@ -183,13 +184,15 @@ navigator.geolocation.getCurrentPosition(function(position) {
     // Use location to fetch grocery stores or points of interest
     fetchNearbyStores(latitude, longitude);
 });
-
+```
+```javascript
 // Device Orientation
 window.addEventListener('deviceorientation', function(event) {
     let alpha = event.alpha;  // Rotation around Z-axis
     let beta = event.beta;    // Rotation around X-axis
     let gamma = event.gamma;  // Rotation around Y-axis
-
+```
+```javascript
     // Adjust UI based on device orientation
     if (gamma > 45) {
         displayRecipeCategory('breakfast');
@@ -243,7 +246,35 @@ The focus now shifts to finalising the app, optimising performance, and preparin
 
 ### Similar Projects and Inspiration
 - **Description**: Research and inspiration from existing projects and tools that leverage geolocation, orientation sensors, and context-aware web apps.
-- **Link**: [Similar Projects and Inspiration](#) (Add your relevant links here)
+- **Link**: [Similar Projects and Inspiration](#)
+Geolocation API Documentation:
+
+MDN Web Docs - Geolocation API
+This is a comprehensive guide to the Geolocation API, providing examples and best practices for implementing geolocation tracking in web applications.
+DeviceOrientation API Documentation:
+
+MDN Web Docs - DeviceOrientation API
+This document explains how the DeviceOrientation API works, with examples on how to detect device tilt and orientation.
+Google Maps API Documentation:
+
+Google Maps Platform
+Official documentation for integrating Google Maps into web applications, including real-time location tracking and custom map overlays.
+Google Maps (Inspiration):
+
+Google Maps
+Google Maps is a prime example of how geolocation can be integrated into an app. It continuously updates the user's position and offers location-based services like navigation and nearby places of interest.
+Star Walk 2 (Inspiration):
+
+Star Walk 2
+This stargazing app uses both geolocation and device orientation to provide real-time information about constellations and stars based on the user's location and where they point their phone.
+Pokemon Go (Inspiration):
+
+Pokemon Go
+An augmented reality (AR) mobile game that combines geolocation with device orientation and camera input to create an interactive environment where users "catch" Pokémon in real-world locations.
+ARCore by Google (Inspiration for orientation and AR):
+
+Google ARCore
+Google's ARCore provides resources for creating augmented reality apps, leveraging device orientation, geolocation, and other sensors for interactive experiences.
 
 ---
 
