@@ -162,23 +162,65 @@ I created a simple diagram to show how the app uses both geolocation and device 
 ---
 
 ## Combining Location and Orientation
-- **Goal**: Merge geolocation and orientation functionality to create a seamless user experience.
+- **Goal**: This week, the goal was to merge both geolocation and device orientation functionality into the app to create a seamless, context-aware experience for users. The idea is to have the app respond to both the user's location and the way they are holding or tilting their device, enhancing interactivity and usefulness.
 - **Progress**: 
-  - Successfully combined location and orientation tracking.
-  - Developed a feature where the app provides different information based on the user's location and device tilt.
-  - Example: The app now shows nearby landmarks based on location and adjusts UI content based on the phone’s direction.
-- **Challenges**: Ensuring that changes in orientation feel intuitive and not overwhelming, while handling location updates efficiently.
-- **Reflection**: Combining these two sensors results in a richer, more immersive experience. Testing in different environments will be crucial for optimization.
+  - Combined the geolocation feature, which provides the user’s current location, with the device orientation feature, which detects changes in device tilt and movement.
+ - Implemented a use case where the app displays nearby grocery stores using the Recipe API (based on location), and depending on the device orientation, the UI changes to show different categories of recipes.
+   - For example, tilting the phone left may display breakfast recipes, tilting right might show dinner recipes, and holding the phone upright could show random suggestions.
+ - Created a smooth integration where the user can switch between location-based and orientation-based interactions without jarring transitions.
+- **Example Use Case**: A user opens the app while in a city. Based on their geolocation, the app fetches data on nearby grocery stores. When the user tilts their device, the app dynamically switches between various recipe categories related to what they can find in those stores.
+- **Challenges**:
+ - Balancing sensor data input: Combining geolocation and orientation data posed challenges in ensuring smooth transitions between modes. The system needed to be responsive but not too sensitive to minor movements.
+ - Managing sensor accuracy: Ensuring the device orientation feature worked correctly in different environments (e.g., bright sunlight, cloudy areas) was tricky, especially as certain sensors perform differently in certain situations.
+- **Code Snippet**:
+```javascript
+// Geolocation
+navigator.geolocation.getCurrentPosition(function(position) {
+    let latitude = position.coords.latitude;
+    let longitude = position.coords.longitude;
+    console.log("Latitude: " + latitude + ", Longitude: " + longitude);
+
+    // Use location to fetch grocery stores or points of interest
+    fetchNearbyStores(latitude, longitude);
+});
+
+// Device Orientation
+window.addEventListener('deviceorientation', function(event) {
+    let alpha = event.alpha;  // Rotation around Z-axis
+    let beta = event.beta;    // Rotation around X-axis
+    let gamma = event.gamma;  // Rotation around Y-axis
+
+    // Adjust UI based on device orientation
+    if (gamma > 45) {
+        displayRecipeCategory('breakfast');
+    } else if (gamma < -45) {
+        displayRecipeCategory('dinner');
+    } else {
+        displayRecipeCategory('random');
+    }
+});
+```
+- **Reflection**:
+ - Sensor Fusion: Combining geolocation and orientation provided a richer, more dynamic user experience. The app feels responsive to both the physical space and how the user interacts with their device.
+### Next Steps: 
+In the following weeks, I'll refine this interaction to ensure smoother transitions and work on optimising the user experience across different devices and browsers.
 
 ---
 
 ## Refinement
-- **Goal**: Improve UI/UX and handle edge cases.
+- **Goal**: This week’s objective was to refine the user interface (UI) and user experience (UX) based on feedback from early user testing, enhance the app's responsiveness to context, and address edge cases (such as denied sensor permissions or GPS inaccuracies).
 - **Progress**: 
-  - Refined the app’s design to ensure smooth transitions between different contexts (location changes and orientation shifts).
-  - Implemented error handling for cases where users deny sensor permissions or move to areas with poor GPS signal.
-  - Conducted user testing to gather feedback.
-- **Next Steps**: Prepare for the final project presentation, refine edge cases, and ensure cross-browser compatibility.
+  - Leveraged a no-code web development tool for rapid prototyping. This enabled me to test layout and design variations more efficiently while focusing on the app’s sensor-based functionality.
+ - Created mockups and interactive prototypes to simulate the app’s behavior when responding to geolocation and device orientation. This allowed for early feedback from users without requiring full back-end development.
+ - Enhanced the user interface to make transitions between location-based and orientation-based interactions more intuitive, reducing user confusion and making the app easier to use.
+- **Challenges**:
+ - Handling Sensor Permissions: Managing scenarios where users deny access to location or orientation sensors was a key focus this week. The app now provides fallback behavior, ensuring a smooth user experience even when sensors are not available.
+ - Testing Across Devices: Different mobile devices interpret sensor data differently, especially for orientation. Adjustments were made to ensure a consistent experience across various smartphones and browsers.
+- **Reflection**:
+ - The use of no-code tools accelerated the prototyping process, allowing more time to gather feedback on the overall design and flow. As a next step, I’ll begin translating this prototype into actual code, focusing on the core geolocation and orientation features.
+ - User testing has proven invaluable, helping identify areas where the UI could be more intuitive. The main challenge moving forward is ensuring that the final coded version maintains the same level of fluidity as the prototype.
+### Next Steps:
+The focus now shifts to finalising the app, optimising performance, and preparing for the final presentation. I will work on integrating sensor data into the coded version, ensuring smooth transitions between real-world context inputs.
 
 ---
 
